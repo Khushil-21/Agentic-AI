@@ -1,3 +1,4 @@
+from langchain_ollama import ChatOllama
 from langgraph.graph import StateGraph, START
 from dotenv import load_dotenv
 from langchain_openai import ChatOpenAI
@@ -12,7 +13,7 @@ from langchain_mcp_adapters.client import MultiServerMCPClient
 
 load_dotenv()  # Load environment variables from .env file
 
-llm = ChatOpenAI(model="gpt-5")
+llm = ChatOllama(model="gpt-oss:20b-cloud")
 
 # MCP client for local FastMCP server
 client = MultiServerMCPClient(
