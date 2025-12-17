@@ -67,7 +67,7 @@ async def main():
     chatbot = await build_graph()
 
     # running the graph
-    add_expenses = await chatbot.ainvoke({"messages": [HumanMessage(content="add 1000 to my expenses on 1st of Dec 2025, 200 on 2nd Dec 2025, 90 on 3rd Dec 2025, 100 on 4th Dec 2025, 250 on 5th Dec 2025, 300 on 6th Dec 2025, 50 on 7th Dec 2025 and 180 on 8th Dec 2025")]})
+    add_expenses = await chatbot.ainvoke({"messages": [HumanMessage(content="add 1000 to my expenses on 1st of Dec 2025, 200 on 2nd Dec 2025, 90 on 3rd Dec 2025, 100 on 4th Dec 2025, 250 on 5th Dec 2025, 300 on 6th Dec 2025, 50 on 7th Dec 2025 and 180 on 8th Dec 2025 all the expense are of food category")]})
     print(add_expenses['messages'][-1].content)
     print("--------------------------------")
     result = await chatbot.ainvoke({"messages": [HumanMessage(content="Give me all my expenses for the month of Dec from 1 Dec to 31 Dec")]})
